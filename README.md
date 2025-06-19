@@ -53,3 +53,13 @@ avaliacao_web/
 ## Licença
 
 Este projeto é para uso exclusivo conforme solicitado.
+
+## Jogo de Quiz Bíblico
+
+Um pequeno jogo em linha de comando foi adicionado para ajudar jovens a estudarem histórias da Bíblia. Para jogar, execute:
+
+```
+python bible_quiz.py
+```
+
+O jogo apresenta perguntas de múltipla escolha e mostra a referência bíblica correspondente após cada resposta.
