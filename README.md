@@ -53,3 +53,23 @@ avaliacao_web/
 ## Licença
 
 Este projeto é para uso exclusivo conforme solicitado.
+
+## Jogo de Quiz Bíblico
+
+Um pequeno jogo em linha de comando foi adicionado para ajudar jovens a estudarem histórias da Bíblia. Para jogar, execute:
+
+```
+python bible_quiz.py
+```
+
+O jogo apresenta perguntas de múltipla escolha e mostra a referência bíblica correspondente após cada resposta.
+
+## Checklist de testes no celular
+
+- Abrir `index.html` no celular (ou via servidor local) e conferir se o layout está adequado em tela 9:16.
+- Verificar se todos os botões estão grandes, com texto legível e bom contraste.
+- No modo "Sala de Aula": escolher uma resposta, confirmar que ela não revela a correta, tocar em "Revelar resposta" e conferir a pontuação coletiva.
+- No modo "Em casa": finalizar o quiz e usar "Repetir fase" para reiniciar o nível.
+- Conferir se as mensagens de encorajamento aparecem quando o modo "Em casa" está ligado.
+- Testar navegação por toque: iniciar, responder perguntas, avançar e voltar ao início.
+- Verificar foco visual ao navegar por teclado (quando disponível) e leitura do feedback por leitor de tela.
