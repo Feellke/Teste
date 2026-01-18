@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz Bíblico - João 1</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app__header">
+      <h1>Quiz Bíblico</h1>
+      <p class="subtitle">João 1.35–51</p>
+    </header>
+
+    <section id="screen-start" class="screen screen--active">
+      <h2>Bem-vindo(a)!</h2>
+      <p>
+        Vamos aprender sobre Jesus com perguntas divertidas. Escolha o nível e
+        toque em começar!
+      </p>
+      <div class="level-picker" role="radiogroup" aria-label="Escolher nível">
+        <button
+          class="btn btn--secondary"
+          data-level="4-7"
+          type="button"
+          role="radio"
+          aria-checked="true"
+        >
+          4–7 anos
+        </button>
+        <button
+          class="btn btn--secondary"
+          data-level="8-12"
+          type="button"
+          role="radio"
+          aria-checked="false"
+        >
+          8–12 anos
+        </button>
+      </div>
+      <button
+        id="toggle-classroom"
+        class="btn btn--secondary"
+        type="button"
+        aria-pressed="false"
+      >
+        Modo Sala de Aula: desligado
+      </button>
+      <button
+        id="toggle-home"
+        class="btn btn--secondary"
+        type="button"
+        aria-pressed="false"
+      >
+        Modo Em casa: desligado
+      </button>
+      <button id="start-game" class="btn btn--primary" type="button">
+        Começar o jogo
+      </button>
+      <button id="go-how" class="btn btn--ghost" type="button">
+        Como jogar
+      </button>
+    </section>
+
+    <section id="screen-how" class="screen">
+      <h2>Como jogar</h2>
+      <ul class="how-list">
+        <li>Leia a pergunta com calma.</li>
+        <li>Toque na resposta que você acha correta.</li>
+        <li>Você recebe uma mensagem carinhosa a cada resposta.</li>
+        <li>No fim, veja sua pontuação!</li>
+      </ul>
+      <p class="note">Sem login, sem dados pessoais. Só diversão e aprendizado!</p>
+      <button id="back-start" class="btn btn--primary" type="button">
+        Voltar ao início
+      </button>
+    </section>
+
+    <section id="screen-play" class="screen">
+      <div class="status-bar">
+        <span id="level-label" class="pill">Nível 4–7</span>
+        <span id="progress-label" class="pill">Pergunta 1 de 6</span>
+      </div>
+      <div id="classroom-status" class="pill pill--highlight" hidden>
+        Sala de Aula ativa • Pontuação da turma: <span id="classroom-score">0</span>
+      </div>
+      <div id="home-status" class="pill pill--home" hidden>
+        Em casa ativo • Você pode repetir a fase quando quiser!
+      </div>
+      <h2 id="question-title">Pergunta</h2>
+      <div id="options" class="options"></div>
+      <div id="feedback" class="feedback" aria-live="polite"></div>
+      <button id="reveal-answer" class="btn btn--secondary" type="button" hidden>
+        Revelar resposta
+      </button>
+      <button id="next-question" class="btn btn--primary" type="button" disabled>
+        Próxima pergunta
+      </button>
+    </section>
+
+    <section id="screen-result" class="screen">
+      <h2>Resultado</h2>
+      <p id="result-text" class="result-text"></p>
+      <p class="subtitle">Você é muito especial! Continue aprendendo. 🌟</p>
+      <button id="play-again" class="btn btn--primary" type="button">
+        Jogar novamente
+      </button>
+      <button id="repeat-level" class="btn btn--secondary" type="button" hidden>
+        Repetir fase
+      </button>
+      <button id="go-start" class="btn btn--ghost" type="button">
+        Voltar ao início
+      </button>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
